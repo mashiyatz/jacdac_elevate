@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mashi\\Desktop\\jacdac_elevate\\prototype-1-godot\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{041E47EE-E20C-4B72-A90C-5409EB9A5F6D}|jacdac_test.csproj|c:\\users\\mashi\\desktop\\jacdac_elevate\\prototype-1-godot\\jacdactest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{041E47EE-E20C-4B72-A90C-5409EB9A5F6D}|jacdac_test.csproj|solutionrelative:jacdactest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "JacdacTest.cs",
+              "DocumentMoniker": "C:\\Users\\mashi\\Desktop\\jacdac_elevate\\prototype-1-godot\\JacdacTest.cs",
+              "RelativeDocumentMoniker": "JacdacTest.cs",
+              "ToolTip": "C:\\Users\\mashi\\Desktop\\jacdac_elevate\\prototype-1-godot\\JacdacTest.cs",
+              "RelativeToolTip": "JacdacTest.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAkwB4AAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-13T15:10:54.911Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
