@@ -14,20 +14,31 @@ public partial class JacdacTest : Node
 	private int LastRotaryValue { get; set; }
 	private int Temperature {  get; set; }
 
-	public override void _Ready()
+	private bool isRotaryActive { get; set; }
+	private RotaryEncoderClient rotary;
+
+    public override void _Ready()
 	{
 		Temperature = 0;
+		isRotaryActive = false;
 		var bus = new JDBus(WebSocketTransport.Create());
 		var button = new ButtonClient(bus, "btn");
-		var rotary = new RotaryEncoderClient(bus, "rotary");
+		rotary = new RotaryEncoderClient(bus, "rotary");
 
-		// button.Down += (s, e) => DirectionsTextBox.CallDeferred("add_text", " ooh");
-		rotary.ReadingChanged += (s, e) => UpdateTemp((RotaryEncoderClient)s);
-	}
+/*		rotary.Connected += (s, e) => rotary.ReadingChanged += (p, q) => UpdateTemp((RotaryEncoderClient)s);
+		rotary.Disconnected += (s, e) => rotary.ReadingChanged -= (p, q) => UpdateTemp((RotaryEncoderClient)s);*/
+
+        rotary.Connected += (s, e) => isRotaryActive = true;
+        rotary.Disconnected += (s, e) => isRotaryActive = false;
+
+
+        // button.Down += (s, e) => DirectionsTextBox.CallDeferred("add_text", " hahaha");
+        // rotary.ReadingChanged += (s, e) => UpdateTemp((RotaryEncoderClient)s);
+    }
 
 	private void UpdateTemp(RotaryEncoderClient rotary)
 	{
-		if (Math.Abs(rotary.Position - LastRotaryValue) > 5) return;
+		if (Math.Abs(rotary.Position - LastRotaryValue) > 5 || (rotary.Position - LastRotaryValue) == 0) return;
 		if (rotary.Position > LastRotaryValue) Temperature++;
 		else Temperature--;
 
@@ -50,6 +61,6 @@ public partial class JacdacTest : Node
 
 	public override void _Process(double delta)
 	{
-
+		if (isRotaryActive) UpdateTemp(rotary);
 	}
 }
