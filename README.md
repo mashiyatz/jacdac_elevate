@@ -1,3 +1,3 @@
-# A JacDac Game Developed in Unity3D
+# A JacDac Game by Vera and Mashi
 
 :) 
