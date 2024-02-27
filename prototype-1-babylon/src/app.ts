@@ -2,8 +2,8 @@ import "@babylonjs/core/Debug/debugLayer";
 import "@babylonjs/inspector";
 import "@babylonjs/loaders/glTF";
 import { Engine, Scene, ArcRotateCamera, Vector3, HemisphericLight, Mesh, MeshBuilder, Color4, FreeCamera } from "@babylonjs/core";
-import { createWebBus, createUSBBus, DEVICE_ANNOUNCE, CHANGE, CONNECT, DISCONNECT, SRV_ROTARY_ENCODER, JDBus, RotaryEncoderServer, serviceClass, JDDevice, JDService } from "jacdac-ts";
-import { EVENT, JDEvent, SRV_BUTTON, REPORT_RECEIVE, ButtonReg, DEVICE_CONNECT, DEVICE_DISCONNECT, ButtonServer, ButtonEvent, ButtonEventPack } from "jacdac-ts";
+import { createUSBBus, DEVICE_ANNOUNCE, JDBus } from "jacdac-ts";
+import { EVENT, JDEvent, SRV_BUTTON, DEVICE_DISCONNECT, ButtonEvent } from "jacdac-ts";
 import { AdvancedDynamicTexture, Button, Control, Rectangle } from "@babylonjs/gui";
 
 enum State { START, GAME };
