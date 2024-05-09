@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const appDirectory = fs.realpathSync(process.cwd());
 
 module.exports = {
-	entry: path.resolve(appDirectory, "src/app.ts"),
+	entry: path.resolve(appDirectory, "src/simple.ts"),
 	output: {
 		filename: "js/bundleName.js",
 		clean: true,
